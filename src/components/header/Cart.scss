@@ -1,0 +1,12 @@
+.h-cart {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+
+  &__count {
+    font-weight: bolder;
+    color: var(--theme-color-1);
+    margin-left: 0.3rem;
+    font-size: var(--h4-size);
+  }
+}

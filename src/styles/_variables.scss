@@ -1,0 +1,22 @@
+:root {
+  // Theme colors
+  --theme-color-1: #f1c557;
+  --theme-color-2: #141921;
+
+  // Font colors
+  --default-font-color: #0f1111;
+  --hint-font-color: #565959;
+  --light-font-color: #ffffff;
+  --hint-light-font-color: #cccccc;
+
+  // Font sizes
+  --h1-size: 3rem;
+  --h2-size: 2.4rem;
+  --h3-size: 2rem;
+  --h4-size: 1.8rem;
+  --h5-size: 1.4rem; // Also used as body font size
+  --h6-size: 1.2rem;
+
+  --border-radius: 0.5rem;
+  --header-height: 6rem;
+}

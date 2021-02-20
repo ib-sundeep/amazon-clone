@@ -1,0 +1,19 @@
+.delivery-location {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+
+  &__pin {
+    margin-right: 0.2rem;
+  }
+
+  &__hint {
+    color: var(--hint-light-font-color);
+    font-size: var(--h6-size);
+    margin-bottom: 0.1rem;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+}

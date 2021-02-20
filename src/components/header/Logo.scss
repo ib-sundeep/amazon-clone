@@ -1,0 +1,8 @@
+.logo {
+  padding: 1.5rem 1rem 0;
+
+  &__img {
+    height: calc(var(--header-height) - 2rem);
+    max-width: 100%;
+  }
+}
