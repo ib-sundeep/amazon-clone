@@ -1,0 +1,22 @@
+.slider {
+  display: flex;
+
+  &__listing {
+    list-style-type: none;
+  }
+
+  &__list {
+    cursor: pointer;
+
+    img {
+      width: 20rem;
+    }
+  }
+
+  &__right {
+    padding: 2rem;
+    img {
+      width: 40rem;
+    }
+  }
+}

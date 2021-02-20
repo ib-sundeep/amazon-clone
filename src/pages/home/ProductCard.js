@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import './ProductCard.scss';
 
@@ -39,13 +40,13 @@ function ProductCard({ className, product }) {
           </div>
         </div>
 
-        <div className="product-card__gallery">
+        <Link to={`/product/${product.id}`} className="product-card__gallery">
           <img
             className="product-card__image"
             alt={product.title}
             src={product.images[0]}
           />
-        </div>
+        </Link>
 
         <div className="product-card__actions">
           <button className="product-card__button">Add to cart</button>
