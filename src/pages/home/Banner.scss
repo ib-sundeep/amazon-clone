@@ -1,0 +1,32 @@
+.h-banner {
+  --banner-fixed-height: 20vh;
+
+  height: var(--banner-fixed-height);
+  outline: none;
+
+  .slider-control-centerright,
+  .slider-control-centerleft {
+    top: calc(var(--banner-fixed-height) * 0.5) !important;
+  }
+
+  &__control {
+    cursor: pointer;
+    color: var(--hint-light-font-color);
+  }
+
+  &__carousel {
+    position: relative;
+
+    &:before {
+      content: '';
+      background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #ffffff);
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: var(--banner-fixed-height);
+      z-index: 1;
+    }
+  }
+}

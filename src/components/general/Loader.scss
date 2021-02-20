@@ -1,0 +1,28 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  &__icon {
+    border-radius: 50%;
+    animation: 360ms linear 0s infinite running spin;
+    border: 0.5rem solid #e2e2e2;
+    border-top-color: var(--theme-color-1);
+    border-right-color: var(--theme-color-1);
+  }
+}

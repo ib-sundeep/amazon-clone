@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    margin: 0.2rem;
+    color: #e2e2e2;
+
+    &--active {
+      color: var(--theme-color-1);
+    }
+  }
+}

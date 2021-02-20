@@ -4,6 +4,7 @@
   color: var(--light-font-color);
   position: fixed;
   width: 100%;
+  z-index: 100;
 
   &__container {
     padding: 0 1rem;
