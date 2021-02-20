@@ -1,0 +1,19 @@
+.information {
+  &__header {
+    font-size: var(--h3-size);
+    font-weight: bold;
+  }
+
+  &__category {
+    color: var(--theme-color-1);
+    font-size: var(--h6-size);
+  }
+
+  &__label {
+    color: var(--hint-font-color);
+    font-size: var(--h6-size);
+  }
+}
+.strikethrough {
+  text-decoration: line-through;
+}
