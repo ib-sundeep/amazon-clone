@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiCartOutline } from '@mdi/js';
+import { Link } from 'react-router-dom';
 
 import './Cart.scss';
 
@@ -10,10 +11,10 @@ function Cart() {
   const { totalQuantity } = useCartState();
 
   return (
-    <div className="h-cart">
+    <Link to="/cart" className="h-cart">
       <Icon path={mdiCartOutline} size={1.4} />
       <div className="h-cart__count">{totalQuantity}</div>
-    </div>
+    </Link>
   );
 }
 

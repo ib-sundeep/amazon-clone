@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { calculatePriceDetails } from 'utils.js/product';
 
 const CartStateContext = React.createContext();
@@ -17,8 +18,7 @@ function cartReducer(state, action) {
         };
       } else {
         newEntry = {
-          name: product.name,
-          price: product.price,
+          ...product,
           quantity: 1,
         };
       }
@@ -27,7 +27,7 @@ function cartReducer(state, action) {
       return {
         ...state,
         totalQuantity: state.totalQuantity + 1,
-        totalPrice: state.totalQuantity + finalPrice,
+        totalPrice: state.totalPrice + finalPrice,
         products: {
           ...state.products,
           [product.id]: newEntry,
@@ -53,7 +53,7 @@ function cartReducer(state, action) {
       return {
         ...state,
         totalQuantity: state.totalQuantity - 1,
-        totalPrice: state.totalQuantity - finalPrice,
+        totalPrice: state.totalPrice - finalPrice,
         products: {
           ...state.products,
           [product.id]: newEntry,

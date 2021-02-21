@@ -1,0 +1,30 @@
+.cart {
+  width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  &__items,
+  &__summary {
+    margin-right: 1rem;
+    background-color: #ffffff;
+  }
+
+  &__items {
+    box-shadow: var(--default-shadow);
+    flex: 1 0 0;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    min-width: 30rem;
+    box-shadow: var(--default-shadow);
+  }
+}

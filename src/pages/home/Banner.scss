@@ -19,7 +19,11 @@
 
     &:before {
       content: '';
-      background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #ffffff);
+      background: linear-gradient(
+        -180deg,
+        rgba(234, 237, 237, 0),
+        var(--body-background-color)
+      );
       bottom: 0;
       left: 0;
       pointer-events: none;
