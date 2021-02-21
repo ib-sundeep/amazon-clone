@@ -12,7 +12,41 @@ const banners = [
 ];
 
 function Banner() {
-  return null;
+  return (
+    <div className="h-banner">
+      <div className="h-banner__carousel">
+        <Carousel
+          autoplay
+          autoplayReverse
+          className="h-banner"
+          renderCenterLeftControls={({ previousSlide }) => (
+            <Icon
+              className="h-banner__control"
+              size={5}
+              path={mdiChevronLeft}
+              onClick={previousSlide}
+            />
+          )}
+          renderCenterRightControls={({ nextSlide }) => (
+            <Icon
+              className="h-banner__control"
+              size={5}
+              path={mdiChevronRight}
+              onClick={nextSlide}
+            />
+          )}
+          renderBottomCenterControls={() => null}
+        >
+          {banners.map((bannerSrc, index) => (
+            <img key={index} alt={`Banner ${index + 1}`} src={bannerSrc} />
+          ))}
+        </Carousel>
+      </div>
+    </div>
+  );
 }
+
+// [1, 2, 3].map(o => 2 * o) // [2, 4, 6]
+// [1, 2, 3].forEach(o => 2 * o)
 
 export default Banner;

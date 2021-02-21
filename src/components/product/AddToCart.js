@@ -7,7 +7,7 @@ import './AddToCart.scss';
 import { useCartDispatch, useCartState } from 'cart-context';
 
 function AddToCard({ product }) {
-  return null;
+  return <button className="add-to-cart-button">Add to card</button>;
 }
 
 export default AddToCard;
