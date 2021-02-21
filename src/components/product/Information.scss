@@ -1,17 +1,46 @@
 .information {
+  padding: 2rem 0 0 0;
   &__header {
     font-size: var(--h3-size);
     font-weight: bold;
   }
 
   &__category {
-    color: var(--theme-color-1);
+    color: var(--link-color);
     font-size: var(--h6-size);
   }
 
   &__label {
     color: var(--hint-font-color);
     font-size: var(--h6-size);
+  }
+
+  &__price {
+    display: flex;
+  }
+
+  &__specs {
+    padding-top: 2rem;
+  }
+
+  &__rating {
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__pricing {
+    padding: 1rem 0 2rem 2rem;
+  }
+
+  &__spec-header {
+    font-size: var(--h4-size);
+    font-weight: bold;
+  }
+
+  &__rating-label {
+    color: var(--link-color);
+    padding-left: 1rem;
   }
 }
 .strikethrough {

@@ -7,16 +7,23 @@
 
   &__list {
     cursor: pointer;
+    padding: 0 0rem 1rem 1rem;
 
     img {
-      width: 20rem;
+      width: 6rem;
+      border: 1px solid #a2a6ac;
+      border-radius: 2px;
+
+      &:hover {
+        border-color: #e77600;
+      }
     }
   }
 
   &__right {
     padding: 2rem;
     img {
-      width: 40rem;
+      width: 60rem;
     }
   }
 }
