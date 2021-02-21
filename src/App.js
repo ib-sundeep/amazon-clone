@@ -10,7 +10,31 @@ import './App.scss';
 import CurrencyFormat from 'components/general/CurrencyFormat';
 
 function App() {
-  return <CurrencyFormat value={10000} currencyCode="INR" />;
+  return (
+    <Router>
+      <Header />
+
+      <div className="page-container">
+        <Switch>
+          <Route exact path="/cart">
+            <CartPage />
+          </Route>
+
+          <Route exact path="/product/:productId">
+            <ProductPage />
+          </Route>
+
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+
+          <Route>
+            <HomePage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

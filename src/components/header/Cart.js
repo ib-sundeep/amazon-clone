@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom';
 
 import './Cart.scss';
 
-import { useCartState } from 'cart-context';
 
 function Cart() {
-  return null;
+  const { totalQuantity } = { totalQuantity: 5, products: [] };
+
+  return (
+    <Link to="/cart" className="h-cart">
+      <Icon path={mdiCartOutline} size={1.4} />
+      <div className="h-cart__count">{totalQuantity}</div>
+    </Link>
+  );
 }
 
 export default Cart;
