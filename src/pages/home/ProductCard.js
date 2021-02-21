@@ -6,17 +6,13 @@ import './ProductCard.scss';
 
 import CurrencyFormat from 'components/general/CurrencyFormat';
 import Rating from 'components/general/Rating';
-import { useCartDispatch } from '../../cart-context'
-
-
+import AddToCard from 'components/product/AddToCart';
+import { calculatePriceDetails } from 'utils.js/product';
 
 function ProductCard({ className, product }) {
-  const basePrice = parseInt(product.price.value, 10);
-  const finalPrice = parseInt(
-    (basePrice * (100 - product.price.discount)) / 100,
-    10,
+  const { finalPrice, basePrice, isDiscounted } = calculatePriceDetails(
+    product.price,
   );
-  const dispatch = useCartDispatch()
 
   return (
     <div className="product-card-wrapper">
@@ -28,7 +24,7 @@ function ProductCard({ className, product }) {
             currencyCode={product.price.currency}
             value={finalPrice}
           />
-          {basePrice !== finalPrice && (
+          {isDiscounted && (
             <CurrencyFormat
               className="product-card__amount product-card__amount--discount"
               currencyCode={product.price.currency}
@@ -53,7 +49,7 @@ function ProductCard({ className, product }) {
         </Link>
 
         <div className="product-card__actions">
-          <button className="product-card__button" onClick={() => dispatch({ type: 'increment', item: product })}>Add to cart</button>
+          <AddToCard product={product} />
         </div>
       </div>
     </div>

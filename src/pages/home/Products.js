@@ -29,7 +29,7 @@ function Products() {
 
   useEffect(() => {
     loadProducts();
-  }, []);
+  }, [loadProducts]);
 
   if (loading) {
     return <Loader size={50} />;
