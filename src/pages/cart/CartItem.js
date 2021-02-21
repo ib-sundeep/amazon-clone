@@ -22,6 +22,7 @@ function CartItem({ product }) {
       <div className="cart-item__purchase">
         <div className="cart-item__price">
           <CurrencyFormat
+            className="cart-item__currency"
             currencyCode={product.price.currency}
             value={finalPrice}
           />
@@ -32,8 +33,10 @@ function CartItem({ product }) {
         <div className="cart-item__quantity">
           <AddToCard product={product} />
         </div>
+        <div className="cart-item__assign">=</div>
         <div className="cart-item__amount">
           <CurrencyFormat
+            className="cart-item__currency bold"
             currencyCode={product.price.currency}
             value={finalPrice * product.quantity}
           />
