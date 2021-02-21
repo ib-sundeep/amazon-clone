@@ -7,9 +7,10 @@ import LoginPage from './pages/login';
 import HomePage from './pages/home';
 
 import './App.scss';
+import CurrencyFormat from 'components/general/CurrencyFormat';
 
 function App() {
-  return 'Hello App';
+  return <CurrencyFormat value={10000} currencyCode="INR" />;
 }
 
 export default App;

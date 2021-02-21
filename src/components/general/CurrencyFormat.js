@@ -13,8 +13,15 @@ const currencyCodeLocaleMap = {
   INR: 'en-IN',
 };
 
-function CurrencyFormat({}) {
-  return null;
+function CurrencyFormat({ className, value, currencyCode, iconSize = 1 }) {
+  return (
+    <div className={classNames('currency-format', className)}>
+      <Icon path={currenyCodeIconMap[currencyCode]} size={iconSize} />
+      <span className="currency-format__value">
+        {value.toLocaleString(currencyCodeLocaleMap[currencyCode])}
+      </span>
+    </div>
+  );
 }
 
 export default CurrencyFormat;
