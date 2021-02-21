@@ -11,6 +11,9 @@
 
     img {
       width: 6rem;
+      height: 6rem;
+      object-fit: contain;
+      object-position: center;
       border: 1px solid #a2a6ac;
       border-radius: 2px;
 
@@ -24,6 +27,9 @@
     padding: 2rem;
     img {
       width: 60rem;
+      height: 60rem;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }
