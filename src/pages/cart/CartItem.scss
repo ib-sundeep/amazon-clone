@@ -36,9 +36,19 @@
   }
 
   &__price,
+  &__amount {
+    min-width: 8rem;
+  }
+
+  &__currency {
+    justify-content: flex-end;
+  }
+
+  &__price,
   &__quantity,
   &__amount,
-  &__multiply {
+  &__multiply,
+  &__assign {
     margin: 0 1rem;
   }
 }

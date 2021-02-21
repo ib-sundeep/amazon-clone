@@ -9,6 +9,7 @@ function getProduct(id) {
 
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   getList: getProductsList,
   getProduct: getProduct

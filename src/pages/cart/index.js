@@ -8,7 +8,8 @@ import CurrencyFormat from 'components/general/CurrencyFormat';
 
 function CartPage() {
   const { products, totalQuantity, totalPrice } = useCartState();
-  const productIds = Object.keys(products).filter(Boolean);
+  const productIds = Object.keys(products).filter((id) => products[id]);
+
   return (
     <div className="cart">
       <div className="cart__main">

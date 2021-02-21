@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Information.scss';
 import Rating from 'components/general/Rating';
 import { calculatePriceDetails } from 'utils.js/product';
