@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import ImageSlider from '../../components/product/ImageSlider';
 import Information from '../../components/product/Information';
 import './index.scss';
@@ -7,7 +7,6 @@ import './index.scss';
 import productsApi from 'api/products';
 import Loader from 'components/general/Loader';
 import Error from 'components/general/Error';
-import products from 'api/products';
 
 function ProductPage() {
   let { productId } = useParams();
@@ -24,18 +23,17 @@ function ProductPage() {
 
     try {
       const json = await productsApi.getProduct(productId);
-      console.log(json)
+      console.log(json);
       setProduct(json);
     } catch (_error) {
       setError(_error);
     }
     setLoading(false);
-  }, [loading]);
+  }, [loading, productId, product]);
 
   useEffect(() => {
     loadProduct();
   }, [loadProduct]);
-
 
   if (loading) {
     return <Loader size={50} />;
