@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { calculatePriceDetails } from 'utils.js/product';
+import { calculatePriceDetails } from 'utils/product';
 
 const CartStateContext = React.createContext();
 const CartDispatchContext = React.createContext();

@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiCurrencyInr } from '@mdi/js';
-import classNames from 'classnames';
 
 import './CurrencyFormat.scss';
 
