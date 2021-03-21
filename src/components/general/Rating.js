@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiStar, mdiStarOutline } from '@mdi/js';
-import classNames from 'classnames';
 
 import './Rating.scss';
 
@@ -13,9 +12,7 @@ function Rating({ rating, maxRating, size = 1.2 }) {
         return (
           <Icon
             key={index}
-            className={classNames('rating__star', {
-              'rating__star--active': isActive,
-            })}
+            className={`rating__star ${isActive ? 'rating__star--active' : ''}`}
             size={size}
             path={isActive ? mdiStar : mdiStarOutline}
           />

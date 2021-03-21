@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import './ProductCard.scss';
@@ -16,7 +15,7 @@ function ProductCard({ className, product }) {
 
   return (
     <div className="product-card-wrapper">
-      <div className={classNames('product-card', { [className]: className })}>
+      <div className={`product-card ${className}`}>
         <div className="product-card__title">{product.title}</div>
         <div className="product-card__price">
           <CurrencyFormat

@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiCurrencyInr } from '@mdi/js';
-import classNames from 'classnames';
 
 import './CurrencyFormat.scss';
 
@@ -21,10 +20,7 @@ function CurrencyFormat({
   ...remainingProps
 }) {
   return (
-    <div
-      className={classNames('currency-format', { [className]: className })}
-      {...remainingProps}
-    >
+    <div className={`currency-format ${className}`} {...remainingProps}>
       <Icon size={iconSize} path={currenyCodeIconMap[currencyCode]} />
       <span className="currency-format__value">
         {value.toLocaleString(currencyCodeLocaleMap[currencyCode])}

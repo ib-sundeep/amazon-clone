@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ImageSlider from '../../components/product/ImageSlider';
 import Information from '../../components/product/Information';
@@ -15,7 +15,7 @@ function ProductPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const loadProduct = useCallback(async () => {
+  const loadProduct = async () => {
     if (loading || product) return;
 
     setLoading(true);
@@ -29,11 +29,12 @@ function ProductPage() {
       setError(_error);
     }
     setLoading(false);
-  }, [loading, productId, product]);
+  };
 
   useEffect(() => {
     loadProduct();
-  }, [loadProduct]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productId]);
 
   if (loading) {
     return <Loader size={50} />;

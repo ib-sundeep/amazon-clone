@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './Products.scss';
 
@@ -12,7 +12,7 @@ function Products() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const loadProducts = useCallback(async () => {
+  const loadProducts = async () => {
     if (loading || products.length > 0) return;
 
     setLoading(true);
@@ -25,11 +25,12 @@ function Products() {
       setError(_error);
     }
     setLoading(false);
-  }, [loading, products]);
+  };
 
   useEffect(() => {
     loadProducts();
-  }, [loadProducts]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (loading) {
     return <Loader size={50} />;
