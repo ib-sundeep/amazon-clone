@@ -4,9 +4,9 @@ import ImageSlider from '../../components/product/ImageSlider';
 import Information from '../../components/product/Information';
 import './index.scss';
 
-import productsApi from 'api/products';
-import Loader from 'components/general/Loader';
+import { API_BASE } from 'utils/constants';
 import Error from 'components/general/Error';
+import Loader from 'components/general/Loader';
 
 function ProductPage() {
   let { productId } = useParams();
@@ -22,8 +22,8 @@ function ProductPage() {
     setError(null);
 
     try {
-      const json = await productsApi.getProduct(productId);
-      console.log(json);
+      const req = await fetch(`${API_BASE}/products/${productId}/`);
+      const json = await req.json();
       setProduct(json);
     } catch (_error) {
       setError(_error);

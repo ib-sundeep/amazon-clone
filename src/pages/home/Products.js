@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import './Products.scss';
 
-import productsApi from 'api/products';
 import Loader from 'components/general/Loader';
 import Error from 'components/general/Error';
 import ProductCard from './ProductCard';
+import { API_BASE } from 'utils/constants';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -19,7 +19,8 @@ function Products() {
     setError(null);
 
     try {
-      const json = await productsApi.getList();
+      const req = await fetch(API_BASE + '/products/');
+      const json = await req.json();
       setProducts(json);
     } catch (_error) {
       setError(_error);
