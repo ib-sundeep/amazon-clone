@@ -6,7 +6,11 @@ import Banner from './Banner';
 import Products from './Products';
 
 function HomePage() {
-  return null;
+  return (
+    <div>
+      <Banner/>
+    </div>
+  );
 }
 
 export default HomePage;
