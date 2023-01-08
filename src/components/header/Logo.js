@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import BrandLogo from 'images/amazon-logo.png';
-import { Link } from 'react-router-dom';
+import BrandLogo from "images/logo.png";
+import { Link } from "react-router-dom";
 
-import './Logo.scss';
+import "./Logo.scss";
 
-function Logo({ country = 'in' }) {
+function Logo({ country = "" }) {
   return (
     <Link to="/" className="logo">
       <img className="logo__img" alt="Amazon" src={BrandLogo} />
