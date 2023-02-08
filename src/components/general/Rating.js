@@ -5,9 +5,9 @@ import classNames from 'classnames';
 
 import './Rating.scss';
 
-function Rating({ rating, maxRating, size = 1.2 }) {
+function Rating({ rating, maxRating, size = 1.4 }) {
   return (
-    <div className="rating">
+    <div className="rating"> 
       {new Array(maxRating).fill(0).map((_, index) => {
         const isActive = rating >= index + 1;
         return (
