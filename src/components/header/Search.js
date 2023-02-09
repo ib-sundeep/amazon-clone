@@ -52,25 +52,7 @@ const categories = [
 function Search() {
   const [category, setCategory] = useState(0);
 
-  return (
-    <div className="search">
-      <select
-        className="search__select"
-        value={category}
-        onChange={(e) => setCategory(parseInt(e.target.value, 10))}
-      >
-        {categories.map((o, i) => (
-          <option key={i} value={i}>
-            {o}
-          </option>
-        ))}
-      </select>
-      <input className="search__input" type="text" />
-      <button className="search__button">
-        <Icon path={mdiMagnify} size={1.4} />
-      </button>
-    </div>
-  );
+  return null;
 }
 
 export default Search;

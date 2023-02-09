@@ -9,31 +9,7 @@ import HomePage from './pages/home';
 import './App.scss';
 
 function App() {
-  return (
-    <Router>
-      <Header />
-
-      <div className="page-container">
-        <Switch>
-          <Route exact path="/cart">
-            <CartPage />
-          </Route>
-
-          <Route exact path="/product/:productId">
-            <ProductPage />
-          </Route>
-
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
-
-          <Route>
-            <HomePage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+  return 'Hello App';
 }
 
 export default App;

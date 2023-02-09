@@ -6,12 +6,7 @@ import { Link } from 'react-router-dom';
 import './Logo.scss';
 
 function Logo({ country = 'in' }) {
-  return (
-    <Link to="/" className="logo">
-      <img className="logo__img" alt="Amazon" src={BrandLogo} />
-      {country && <span className="logo__country">.{country}</span>}
-    </Link>
-  );
+  return null;
 }
 
 export default Logo;
